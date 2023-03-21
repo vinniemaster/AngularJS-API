@@ -1,0 +1,19 @@
+<table class ="styled-table">
+  <thead>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Link</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let repo of tabela | async" >
+      <td>{{repo.name}}</td>
+      <td>{{repo.description}}</td>
+      <td>{{repo.html_url}}</td>
+      <p class="div"></p>
+    </tr>
+  </tbody>
+</table>
+
+<pre>
+  {{tabela | async | json}}
+</pre>
